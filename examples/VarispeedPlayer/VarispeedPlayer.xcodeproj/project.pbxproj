@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C00CE18F1BA0CE6D00501CC1 /* ControlBinop.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE1541BA0CE6D00501CC1 /* ControlBinop.c */; };
+		C00CE1901BA0CE6D00501CC1 /* ControlCast.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE1561BA0CE6D00501CC1 /* ControlCast.c */; };
+		C00CE1911BA0CE6D00501CC1 /* ControlDelay.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE1581BA0CE6D00501CC1 /* ControlDelay.c */; };
+		C00CE1921BA0CE6D00501CC1 /* ControlPrint.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE15A1BA0CE6D00501CC1 /* ControlPrint.c */; };
+		C00CE1931BA0CE6D00501CC1 /* ControlSlice.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE15C1BA0CE6D00501CC1 /* ControlSlice.c */; };
+		C00CE1941BA0CE6D00501CC1 /* ControlSystem.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE15E1BA0CE6D00501CC1 /* ControlSystem.c */; };
+		C00CE1951BA0CE6D00501CC1 /* ControlVar.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE1601BA0CE6D00501CC1 /* ControlVar.c */; };
+		C00CE1961BA0CE6D00501CC1 /* Heavy.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE1621BA0CE6D00501CC1 /* Heavy.c */; };
+		C00CE1971BA0CE6D00501CC1 /* HvBase.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE1661BA0CE6D00501CC1 /* HvBase.c */; };
+		C00CE1981BA0CE6D00501CC1 /* HvContext_Playhead.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE1681BA0CE6D00501CC1 /* HvContext_Playhead.c */; };
+		C00CE1991BA0CE6D00501CC1 /* HvContext_TableReader.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE16A1BA0CE6D00501CC1 /* HvContext_TableReader.c */; };
+		C00CE19A1BA0CE6D00501CC1 /* HvMessage.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE16C1BA0CE6D00501CC1 /* HvMessage.c */; };
+		C00CE19B1BA0CE6D00501CC1 /* HvTable.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE16E1BA0CE6D00501CC1 /* HvTable.c */; };
+		C00CE19C1BA0CE6D00501CC1 /* MessagePool.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE1701BA0CE6D00501CC1 /* MessagePool.c */; };
+		C00CE19D1BA0CE6D00501CC1 /* MessageQueue.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE1721BA0CE6D00501CC1 /* MessageQueue.c */; };
+		C00CE19E1BA0CE6D00501CC1 /* SignalBiquad.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE1741BA0CE6D00501CC1 /* SignalBiquad.c */; };
+		C00CE19F1BA0CE6D00501CC1 /* SignalEnvelope.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE1761BA0CE6D00501CC1 /* SignalEnvelope.c */; };
+		C00CE1A01BA0CE6D00501CC1 /* SignalPhasor.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE1781BA0CE6D00501CC1 /* SignalPhasor.c */; };
+		C00CE1A11BA0CE6D00501CC1 /* SignalSample.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE17A1BA0CE6D00501CC1 /* SignalSample.c */; };
+		C00CE1A21BA0CE6D00501CC1 /* SignalTabread.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE17C1BA0CE6D00501CC1 /* SignalTabread.c */; };
+		C00CE1A31BA0CE6D00501CC1 /* SignalVar.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE17E1BA0CE6D00501CC1 /* SignalVar.c */; };
+		C00CE1A41BA0CE6D00501CC1 /* Utils_mac.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE1811BA0CE6D00501CC1 /* Utils_mac.c */; };
+		C00CE1A51BA0CE6D00501CC1 /* Utils_unix.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE1831BA0CE6D00501CC1 /* Utils_unix.c */; };
+		C00CE1A61BA0CE6D00501CC1 /* Utils_windows.c in Sources */ = {isa = PBXBuildFile; fileRef = C00CE1851BA0CE6D00501CC1 /* Utils_windows.c */; };
+		C00CE1A71BA0CE6D00501CC1 /* Buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C00CE1871BA0CE6D00501CC1 /* Buffer.cpp */; };
+		C00CE1A81BA0CE6D00501CC1 /* FilePlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C00CE1891BA0CE6D00501CC1 /* FilePlayer.cpp */; };
+		C00CE1A91BA0CE6D00501CC1 /* VarispeedPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C00CE18B1BA0CE6D00501CC1 /* VarispeedPlayer.cpp */; };
+		C011E6531B7FA247005DF361 /* libportaudio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C011E6521B7FA247005DF361 /* libportaudio.a */; };
+		C011E6551B7FA25B005DF361 /* libsndfile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C011E6541B7FA25B005DF361 /* libsndfile.a */; };
+		C011E65B1B7FAAE6005DF361 /* test.wav in Resources */ = {isa = PBXBuildFile; fileRef = C011E65A1B7FAAE6005DF361 /* test.wav */; };
+		C0681C641B7F7EA100656F5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0681C631B7F7EA100656F5F /* AppDelegate.m */; };
+		C0681C661B7F7EA100656F5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0681C651B7F7EA100656F5F /* main.m */; };
+		C0681C691B7F7EA100656F5F /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C0681C681B7F7EA100656F5F /* ViewController.mm */; };
+		C0681C6B1B7F7EA100656F5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0681C6A1B7F7EA100656F5F /* Images.xcassets */; };
+		C0681C6E1B7F7EA100656F5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0681C6C1B7F7EA100656F5F /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C00CE1541BA0CE6D00501CC1 /* ControlBinop.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ControlBinop.c; sourceTree = "<group>"; };
+		C00CE1551BA0CE6D00501CC1 /* ControlBinop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlBinop.h; sourceTree = "<group>"; };
+		C00CE1561BA0CE6D00501CC1 /* ControlCast.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ControlCast.c; sourceTree = "<group>"; };
+		C00CE1571BA0CE6D00501CC1 /* ControlCast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlCast.h; sourceTree = "<group>"; };
+		C00CE1581BA0CE6D00501CC1 /* ControlDelay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ControlDelay.c; sourceTree = "<group>"; };
+		C00CE1591BA0CE6D00501CC1 /* ControlDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlDelay.h; sourceTree = "<group>"; };
+		C00CE15A1BA0CE6D00501CC1 /* ControlPrint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ControlPrint.c; sourceTree = "<group>"; };
+		C00CE15B1BA0CE6D00501CC1 /* ControlPrint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlPrint.h; sourceTree = "<group>"; };
+		C00CE15C1BA0CE6D00501CC1 /* ControlSlice.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ControlSlice.c; sourceTree = "<group>"; };
+		C00CE15D1BA0CE6D00501CC1 /* ControlSlice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlSlice.h; sourceTree = "<group>"; };
+		C00CE15E1BA0CE6D00501CC1 /* ControlSystem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ControlSystem.c; sourceTree = "<group>"; };
+		C00CE15F1BA0CE6D00501CC1 /* ControlSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlSystem.h; sourceTree = "<group>"; };
+		C00CE1601BA0CE6D00501CC1 /* ControlVar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ControlVar.c; sourceTree = "<group>"; };
+		C00CE1611BA0CE6D00501CC1 /* ControlVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVar.h; sourceTree = "<group>"; };
+		C00CE1621BA0CE6D00501CC1 /* Heavy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Heavy.c; sourceTree = "<group>"; };
+		C00CE1631BA0CE6D00501CC1 /* Heavy_Playhead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Heavy_Playhead.h; sourceTree = "<group>"; };
+		C00CE1641BA0CE6D00501CC1 /* Heavy_TableReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Heavy_TableReader.h; sourceTree = "<group>"; };
+		C00CE1651BA0CE6D00501CC1 /* HeavyMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeavyMath.h; sourceTree = "<group>"; };
+		C00CE1661BA0CE6D00501CC1 /* HvBase.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HvBase.c; sourceTree = "<group>"; };
+		C00CE1671BA0CE6D00501CC1 /* HvBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HvBase.h; sourceTree = "<group>"; };
+		C00CE1681BA0CE6D00501CC1 /* HvContext_Playhead.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HvContext_Playhead.c; sourceTree = "<group>"; };
+		C00CE1691BA0CE6D00501CC1 /* HvContext_Playhead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HvContext_Playhead.h; sourceTree = "<group>"; };
+		C00CE16A1BA0CE6D00501CC1 /* HvContext_TableReader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HvContext_TableReader.c; sourceTree = "<group>"; };
+		C00CE16B1BA0CE6D00501CC1 /* HvContext_TableReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HvContext_TableReader.h; sourceTree = "<group>"; };
+		C00CE16C1BA0CE6D00501CC1 /* HvMessage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HvMessage.c; sourceTree = "<group>"; };
+		C00CE16D1BA0CE6D00501CC1 /* HvMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HvMessage.h; sourceTree = "<group>"; };
+		C00CE16E1BA0CE6D00501CC1 /* HvTable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HvTable.c; sourceTree = "<group>"; };
+		C00CE16F1BA0CE6D00501CC1 /* HvTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HvTable.h; sourceTree = "<group>"; };
+		C00CE1701BA0CE6D00501CC1 /* MessagePool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MessagePool.c; sourceTree = "<group>"; };
+		C00CE1711BA0CE6D00501CC1 /* MessagePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagePool.h; sourceTree = "<group>"; };
+		C00CE1721BA0CE6D00501CC1 /* MessageQueue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MessageQueue.c; sourceTree = "<group>"; };
+		C00CE1731BA0CE6D00501CC1 /* MessageQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageQueue.h; sourceTree = "<group>"; };
+		C00CE1741BA0CE6D00501CC1 /* SignalBiquad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SignalBiquad.c; sourceTree = "<group>"; };
+		C00CE1751BA0CE6D00501CC1 /* SignalBiquad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalBiquad.h; sourceTree = "<group>"; };
+		C00CE1761BA0CE6D00501CC1 /* SignalEnvelope.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SignalEnvelope.c; sourceTree = "<group>"; };
+		C00CE1771BA0CE6D00501CC1 /* SignalEnvelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalEnvelope.h; sourceTree = "<group>"; };
+		C00CE1781BA0CE6D00501CC1 /* SignalPhasor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SignalPhasor.c; sourceTree = "<group>"; };
+		C00CE1791BA0CE6D00501CC1 /* SignalPhasor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalPhasor.h; sourceTree = "<group>"; };
+		C00CE17A1BA0CE6D00501CC1 /* SignalSample.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SignalSample.c; sourceTree = "<group>"; };
+		C00CE17B1BA0CE6D00501CC1 /* SignalSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalSample.h; sourceTree = "<group>"; };
+		C00CE17C1BA0CE6D00501CC1 /* SignalTabread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SignalTabread.c; sourceTree = "<group>"; };
+		C00CE17D1BA0CE6D00501CC1 /* SignalTabread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalTabread.h; sourceTree = "<group>"; };
+		C00CE17E1BA0CE6D00501CC1 /* SignalVar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SignalVar.c; sourceTree = "<group>"; };
+		C00CE17F1BA0CE6D00501CC1 /* SignalVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalVar.h; sourceTree = "<group>"; };
+		C00CE1801BA0CE6D00501CC1 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		C00CE1811BA0CE6D00501CC1 /* Utils_mac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Utils_mac.c; sourceTree = "<group>"; };
+		C00CE1821BA0CE6D00501CC1 /* Utils_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils_mac.h; sourceTree = "<group>"; };
+		C00CE1831BA0CE6D00501CC1 /* Utils_unix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Utils_unix.c; sourceTree = "<group>"; };
+		C00CE1841BA0CE6D00501CC1 /* Utils_unix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils_unix.h; sourceTree = "<group>"; };
+		C00CE1851BA0CE6D00501CC1 /* Utils_windows.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Utils_windows.c; sourceTree = "<group>"; };
+		C00CE1861BA0CE6D00501CC1 /* Utils_windows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils_windows.h; sourceTree = "<group>"; };
+		C00CE1871BA0CE6D00501CC1 /* Buffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Buffer.cpp; sourceTree = "<group>"; };
+		C00CE1881BA0CE6D00501CC1 /* Buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buffer.h; sourceTree = "<group>"; };
+		C00CE1891BA0CE6D00501CC1 /* FilePlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FilePlayer.cpp; sourceTree = "<group>"; };
+		C00CE18A1BA0CE6D00501CC1 /* FilePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePlayer.h; sourceTree = "<group>"; };
+		C00CE18B1BA0CE6D00501CC1 /* VarispeedPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VarispeedPlayer.cpp; sourceTree = "<group>"; };
+		C00CE18C1BA0CE6D00501CC1 /* VarispeedPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VarispeedPlayer.h; sourceTree = "<group>"; };
+		C011E6521B7FA247005DF361 /* libportaudio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libportaudio.a; path = /usr/local/Cellar/portaudio/19.20140130/lib/libportaudio.a; sourceTree = "<absolute>"; };
+		C011E6541B7FA25B005DF361 /* libsndfile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsndfile.a; path = /usr/local/Cellar/libsndfile/1.0.25/lib/libsndfile.a; sourceTree = "<absolute>"; };
+		C011E65A1B7FAAE6005DF361 /* test.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = test.wav; sourceTree = "<group>"; };
+		C0681C5D1B7F7EA100656F5F /* VarispeedPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VarispeedPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0681C611B7F7EA100656F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0681C621B7F7EA100656F5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C0681C631B7F7EA100656F5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C0681C651B7F7EA100656F5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C0681C671B7F7EA100656F5F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C0681C681B7F7EA100656F5F /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		C0681C6A1B7F7EA100656F5F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C0681C6D1B7F7EA100656F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C0681C5A1B7F7EA100656F5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C011E6531B7FA247005DF361 /* libportaudio.a in Frameworks */,
+				C011E6551B7FA25B005DF361 /* libsndfile.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C00CE14C1BA0CE6D00501CC1 /* Buffers */ = {
+			isa = PBXGroup;
+			children = (
+				C00CE14D1BA0CE6D00501CC1 /* _heavy */,
+				C00CE1871BA0CE6D00501CC1 /* Buffer.cpp */,
+				C00CE1881BA0CE6D00501CC1 /* Buffer.h */,
+				C00CE1891BA0CE6D00501CC1 /* FilePlayer.cpp */,
+				C00CE18A1BA0CE6D00501CC1 /* FilePlayer.h */,
+				C00CE18B1BA0CE6D00501CC1 /* VarispeedPlayer.cpp */,
+				C00CE18C1BA0CE6D00501CC1 /* VarispeedPlayer.h */,
+			);
+			name = Buffers;
+			path = ../../Buffers;
+			sourceTree = "<group>";
+		};
+		C00CE14D1BA0CE6D00501CC1 /* _heavy */ = {
+			isa = PBXGroup;
+			children = (
+				C00CE1531BA0CE6D00501CC1 /* src */,
+			);
+			path = _heavy;
+			sourceTree = "<group>";
+		};
+		C00CE1531BA0CE6D00501CC1 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C00CE1541BA0CE6D00501CC1 /* ControlBinop.c */,
+				C00CE1551BA0CE6D00501CC1 /* ControlBinop.h */,
+				C00CE1561BA0CE6D00501CC1 /* ControlCast.c */,
+				C00CE1571BA0CE6D00501CC1 /* ControlCast.h */,
+				C00CE1581BA0CE6D00501CC1 /* ControlDelay.c */,
+				C00CE1591BA0CE6D00501CC1 /* ControlDelay.h */,
+				C00CE15A1BA0CE6D00501CC1 /* ControlPrint.c */,
+				C00CE15B1BA0CE6D00501CC1 /* ControlPrint.h */,
+				C00CE15C1BA0CE6D00501CC1 /* ControlSlice.c */,
+				C00CE15D1BA0CE6D00501CC1 /* ControlSlice.h */,
+				C00CE15E1BA0CE6D00501CC1 /* ControlSystem.c */,
+				C00CE15F1BA0CE6D00501CC1 /* ControlSystem.h */,
+				C00CE1601BA0CE6D00501CC1 /* ControlVar.c */,
+				C00CE1611BA0CE6D00501CC1 /* ControlVar.h */,
+				C00CE1621BA0CE6D00501CC1 /* Heavy.c */,
+				C00CE1631BA0CE6D00501CC1 /* Heavy_Playhead.h */,
+				C00CE1641BA0CE6D00501CC1 /* Heavy_TableReader.h */,
+				C00CE1651BA0CE6D00501CC1 /* HeavyMath.h */,
+				C00CE1661BA0CE6D00501CC1 /* HvBase.c */,
+				C00CE1671BA0CE6D00501CC1 /* HvBase.h */,
+				C00CE1681BA0CE6D00501CC1 /* HvContext_Playhead.c */,
+				C00CE1691BA0CE6D00501CC1 /* HvContext_Playhead.h */,
+				C00CE16A1BA0CE6D00501CC1 /* HvContext_TableReader.c */,
+				C00CE16B1BA0CE6D00501CC1 /* HvContext_TableReader.h */,
+				C00CE16C1BA0CE6D00501CC1 /* HvMessage.c */,
+				C00CE16D1BA0CE6D00501CC1 /* HvMessage.h */,
+				C00CE16E1BA0CE6D00501CC1 /* HvTable.c */,
+				C00CE16F1BA0CE6D00501CC1 /* HvTable.h */,
+				C00CE1701BA0CE6D00501CC1 /* MessagePool.c */,
+				C00CE1711BA0CE6D00501CC1 /* MessagePool.h */,
+				C00CE1721BA0CE6D00501CC1 /* MessageQueue.c */,
+				C00CE1731BA0CE6D00501CC1 /* MessageQueue.h */,
+				C00CE1741BA0CE6D00501CC1 /* SignalBiquad.c */,
+				C00CE1751BA0CE6D00501CC1 /* SignalBiquad.h */,
+				C00CE1761BA0CE6D00501CC1 /* SignalEnvelope.c */,
+				C00CE1771BA0CE6D00501CC1 /* SignalEnvelope.h */,
+				C00CE1781BA0CE6D00501CC1 /* SignalPhasor.c */,
+				C00CE1791BA0CE6D00501CC1 /* SignalPhasor.h */,
+				C00CE17A1BA0CE6D00501CC1 /* SignalSample.c */,
+				C00CE17B1BA0CE6D00501CC1 /* SignalSample.h */,
+				C00CE17C1BA0CE6D00501CC1 /* SignalTabread.c */,
+				C00CE17D1BA0CE6D00501CC1 /* SignalTabread.h */,
+				C00CE17E1BA0CE6D00501CC1 /* SignalVar.c */,
+				C00CE17F1BA0CE6D00501CC1 /* SignalVar.h */,
+				C00CE1801BA0CE6D00501CC1 /* Utils.h */,
+				C00CE1811BA0CE6D00501CC1 /* Utils_mac.c */,
+				C00CE1821BA0CE6D00501CC1 /* Utils_mac.h */,
+				C00CE1831BA0CE6D00501CC1 /* Utils_unix.c */,
+				C00CE1841BA0CE6D00501CC1 /* Utils_unix.h */,
+				C00CE1851BA0CE6D00501CC1 /* Utils_windows.c */,
+				C00CE1861BA0CE6D00501CC1 /* Utils_windows.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C011E6571B7FA26A005DF361 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C011E6541B7FA25B005DF361 /* libsndfile.a */,
+				C011E6521B7FA247005DF361 /* libportaudio.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0681C541B7F7EA100656F5F = {
+			isa = PBXGroup;
+			children = (
+				C00CE14C1BA0CE6D00501CC1 /* Buffers */,
+				C0681C5F1B7F7EA100656F5F /* VarispeedPlayer */,
+				C011E6571B7FA26A005DF361 /* Frameworks */,
+				C0681C5E1B7F7EA100656F5F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C0681C5E1B7F7EA100656F5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0681C5D1B7F7EA100656F5F /* VarispeedPlayer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0681C5F1B7F7EA100656F5F /* VarispeedPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				C0681C621B7F7EA100656F5F /* AppDelegate.h */,
+				C0681C631B7F7EA100656F5F /* AppDelegate.m */,
+				C0681C671B7F7EA100656F5F /* ViewController.h */,
+				C0681C681B7F7EA100656F5F /* ViewController.mm */,
+				C0681C6A1B7F7EA100656F5F /* Images.xcassets */,
+				C0681C6C1B7F7EA100656F5F /* Main.storyboard */,
+				C011E65A1B7FAAE6005DF361 /* test.wav */,
+				C0681C601B7F7EA100656F5F /* Supporting Files */,
+			);
+			path = VarispeedPlayer;
+			sourceTree = "<group>";
+		};
+		C0681C601B7F7EA100656F5F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0681C611B7F7EA100656F5F /* Info.plist */,
+				C0681C651B7F7EA100656F5F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C0681C5C1B7F7EA100656F5F /* VarispeedPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0681C7D1B7F7EA100656F5F /* Build configuration list for PBXNativeTarget "VarispeedPlayer" */;
+			buildPhases = (
+				C0681C591B7F7EA100656F5F /* Sources */,
+				C0681C5A1B7F7EA100656F5F /* Frameworks */,
+				C0681C5B1B7F7EA100656F5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VarispeedPlayer;
+			productName = ScratchPlayer;
+			productReference = C0681C5D1B7F7EA100656F5F /* VarispeedPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C0681C551B7F7EA100656F5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Reactify;
+				TargetAttributes = {
+					C0681C5C1B7F7EA100656F5F = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = C0681C581B7F7EA100656F5F /* Build configuration list for PBXProject "VarispeedPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C0681C541B7F7EA100656F5F;
+			productRefGroup = C0681C5E1B7F7EA100656F5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C0681C5C1B7F7EA100656F5F /* VarispeedPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C0681C5B1B7F7EA100656F5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C011E65B1B7FAAE6005DF361 /* test.wav in Resources */,
+				C0681C6B1B7F7EA100656F5F /* Images.xcassets in Resources */,
+				C0681C6E1B7F7EA100656F5F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C0681C591B7F7EA100656F5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C00CE1A91BA0CE6D00501CC1 /* VarispeedPlayer.cpp in Sources */,
+				C00CE19B1BA0CE6D00501CC1 /* HvTable.c in Sources */,
+				C00CE19A1BA0CE6D00501CC1 /* HvMessage.c in Sources */,
+				C00CE1931BA0CE6D00501CC1 /* ControlSlice.c in Sources */,
+				C00CE1A31BA0CE6D00501CC1 /* SignalVar.c in Sources */,
+				C00CE18F1BA0CE6D00501CC1 /* ControlBinop.c in Sources */,
+				C00CE1971BA0CE6D00501CC1 /* HvBase.c in Sources */,
+				C00CE19F1BA0CE6D00501CC1 /* SignalEnvelope.c in Sources */,
+				C00CE1991BA0CE6D00501CC1 /* HvContext_TableReader.c in Sources */,
+				C00CE1A81BA0CE6D00501CC1 /* FilePlayer.cpp in Sources */,
+				C00CE1981BA0CE6D00501CC1 /* HvContext_Playhead.c in Sources */,
+				C00CE1A71BA0CE6D00501CC1 /* Buffer.cpp in Sources */,
+				C00CE1A51BA0CE6D00501CC1 /* Utils_unix.c in Sources */,
+				C00CE1941BA0CE6D00501CC1 /* ControlSystem.c in Sources */,
+				C00CE19E1BA0CE6D00501CC1 /* SignalBiquad.c in Sources */,
+				C00CE1911BA0CE6D00501CC1 /* ControlDelay.c in Sources */,
+				C00CE1A21BA0CE6D00501CC1 /* SignalTabread.c in Sources */,
+				C00CE1A11BA0CE6D00501CC1 /* SignalSample.c in Sources */,
+				C0681C691B7F7EA100656F5F /* ViewController.mm in Sources */,
+				C00CE19C1BA0CE6D00501CC1 /* MessagePool.c in Sources */,
+				C00CE1901BA0CE6D00501CC1 /* ControlCast.c in Sources */,
+				C00CE1A41BA0CE6D00501CC1 /* Utils_mac.c in Sources */,
+				C00CE1921BA0CE6D00501CC1 /* ControlPrint.c in Sources */,
+				C00CE19D1BA0CE6D00501CC1 /* MessageQueue.c in Sources */,
+				C00CE1951BA0CE6D00501CC1 /* ControlVar.c in Sources */,
+				C00CE1A01BA0CE6D00501CC1 /* SignalPhasor.c in Sources */,
+				C00CE1A61BA0CE6D00501CC1 /* Utils_windows.c in Sources */,
+				C0681C661B7F7EA100656F5F /* main.m in Sources */,
+				C0681C641B7F7EA100656F5F /* AppDelegate.m in Sources */,
+				C00CE1961BA0CE6D00501CC1 /* Heavy.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C0681C6C1B7F7EA100656F5F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0681C6D1B7F7EA100656F5F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C0681C7B1B7F7EA100656F5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C0681C7C1B7F7EA100656F5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C0681C7E1B7F7EA100656F5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = VarispeedPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/libsndfile/1.0.25/lib,
+					/usr/local/Cellar/portaudio/19.20140130/lib,
+				);
+				PRODUCT_NAME = VarispeedPlayer;
+				USER_HEADER_SEARCH_PATHS = "/usr/local/Cellar/libsndfile/1.0.25/include /usr/local/Cellar/portaudio/19.20140130/include";
+			};
+			name = Debug;
+		};
+		C0681C7F1B7F7EA100656F5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = VarispeedPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/libsndfile/1.0.25/lib,
+					/usr/local/Cellar/portaudio/19.20140130/lib,
+				);
+				PRODUCT_NAME = VarispeedPlayer;
+				USER_HEADER_SEARCH_PATHS = "/usr/local/Cellar/libsndfile/1.0.25/include /usr/local/Cellar/portaudio/19.20140130/include";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C0681C581B7F7EA100656F5F /* Build configuration list for PBXProject "VarispeedPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0681C7B1B7F7EA100656F5F /* Debug */,
+				C0681C7C1B7F7EA100656F5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0681C7D1B7F7EA100656F5F /* Build configuration list for PBXNativeTarget "VarispeedPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0681C7E1B7F7EA100656F5F /* Debug */,
+				C0681C7F1B7F7EA100656F5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C0681C551B7F7EA100656F5F /* Project object */;
+}
