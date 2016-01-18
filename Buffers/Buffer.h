@@ -15,8 +15,7 @@
 class Buffer
 {
 public:
-	
-	Buffer(const double sampleRate, const char* inFilePath);
+	Buffer(const double sampleRate, const char* filePath);
 	
 	~Buffer();
 	
@@ -26,11 +25,10 @@ public:
 	
 	const double getSampleRate();
 	
-	const float* const &getFloatData() { return mFloatData; }
+	const float* const getFloatData() { return floatData; }
 	
 private:
-	
-	const float *mFloatData;
+	const float* floatData;
 };
 
 #endif /* defined(__Buffer__) */

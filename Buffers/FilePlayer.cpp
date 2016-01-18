@@ -1,67 +1,77 @@
 //
-//  FilePlayer.cpp
-//  Buffers
-//
 //  Created by Ragnar Hrafnkelsson on 15/08/2015.
 //  Copyright (c) 2015 Reactify. All rights reserved.
 //
 
-#include <stdlib.h>
 #include <string>
+#include "assert.h"
 #include "Buffer.h"
 #include "FilePlayer.h"
 
 
-FilePlayer::FilePlayer(Buffer *buffer) : mBuffer(buffer), mIsPlaying(false), mNumFramesPlayed(0) {}
+FilePlayer::FilePlayer(const char* filePath, double sampleRate)
+:	buffer(new Buffer(sampleRate, filePath)),
+	isPlaying(false),
+	framesPlayed(0)
+{
+	
+}
 
 FilePlayer::~FilePlayer()
 {
-	delete mBuffer;
 }
 
 void FilePlayer::play()
 {
-	mIsPlaying = true;
+	isPlaying = true;
 }
 
 void FilePlayer::pause()
 {
-	mIsPlaying = false;
+	isPlaying = false;
 }
 
 void FilePlayer::stop()
 {
-	mIsPlaying = false;
-	mNumFramesPlayed = 0;
+	isPlaying = false;
+	framesPlayed = 0;
 }
 
-void FilePlayer::processShort(short* const buffer, const int frameCount)
+void FilePlayer::processShort(int16_t* const buffer, const int frameCount)
 {
 	float leftBuffer[frameCount], rightBuffer[frameCount];
-	memset(leftBuffer, 0, frameCount * sizeof(float));
-	memset(rightBuffer, 0, frameCount * sizeof(float));
 	float *buffers[2] = {leftBuffer, rightBuffer};
 	processFloat(buffers, frameCount);
 	for (int i = 0; i < frameCount; i++)
 	{
-		buffer[i*2] = (short)(leftBuffer[i] * 32767.f);
-		buffer[i*2+1] = (short)(rightBuffer[i] * 32767.f);
+		buffer[i*2] = (int16_t)(leftBuffer[i] * 32767.f);
+		buffer[i*2+1] = (int16_t)(rightBuffer[i] * 32767.f);
 	}
 }
 
 void FilePlayer::processFloat(float** const buffers, const int frameCount)
 {
-	if ( !isPlaying() ) return;
+	if ( !getIsPlaying() ) return;
 	
-	int64_t numFramesLeft = getBuffer()->getNumFrames() - numFramesPlayed();
-	int64_t numFramesToRead = (numFramesLeft < frameCount) ? numFramesLeft : frameCount;
+	Buffer* buffer = getBuffer();
 	
-	unsigned long index = numFramesPlayed();
-	memcpy(buffers[0], getBuffer()->getFloatData()+index, numFramesToRead * sizeof(float));
-	memcpy(buffers[1], getBuffer()->getFloatData()+index, numFramesToRead * sizeof(float));
-	mNumFramesPlayed += numFramesToRead;
+	int64_t index = getFramesPlayed();
+	int64_t totalFrames = buffer->getNumFrames();
+	int64_t framesLeft	= totalFrames - index;
+	int64_t framesToRead = (framesLeft < frameCount && !getIsLooping()) ? framesLeft : frameCount;
+
+	for ( int64_t i = 0; i < framesToRead; i++ )
+	{
+		int64_t readIndex = (index + i) % totalFrames;
+		assert(readIndex <= totalFrames);
+		buffers[0][i] = buffers[1][i] = buffer->getFloatData()[readIndex];
+	}
 	
-	// Pause on EOF
-	if (numFramesPlayed() >= getBuffer()->getNumFrames())
-		pause();
+	framesPlayed += framesToRead;
+	
+	if ( getFramesPlayed() >= totalFrames ) // Pause or loop on EOF
+	{
+		if ( getIsLooping() ) framesPlayed -= totalFrames;
+		else pause();
+	}
 }

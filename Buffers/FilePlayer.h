@@ -9,16 +9,12 @@
 #ifndef __FilePlayer__
 #define __FilePlayer__
 
-#include <stdio.h>
-#include <stdint.h>
-
-class Buffer;
+#include "Buffer.h"
 
 class FilePlayer
 {
 public:
-	
-	FilePlayer(Buffer *buffer);
+	FilePlayer(const char* filePath, double sampleRate);
 	
 	~FilePlayer();
 	
@@ -28,23 +24,41 @@ public:
 	
 	virtual void stop();
 	
-	inline const bool &isPlaying() { return mIsPlaying; }
+	void setLoop(bool loop) { isLooping = loop; }
 	
-	inline const int64_t &numFramesPlayed() { return mNumFramesPlayed; }
+	const bool& getIsLooping() { return isLooping; }
 	
-	virtual void processShort(short* const buffer, const int frameCount);
+	/**
+	 *  Process interleaved short buffer
+	 *
+	 *  @param buffer     Interleaved buffer of shorts
+	 *  @param frameCount Number of frames per buffer
+	 */
+	virtual void processShort(int16_t* const buffer, const int frameCount);
 	
+	/**
+	 *  Process an array of float buffers. It is the user's responsibility
+	 *	to provide the correct number of buffers to match file channels
+	 *
+	 *  @param buffers    Array of float buffers
+	 *  @param frameCount Number of frames per buffer
+	 */
 	virtual void processFloat(float** const buffers, const int frameCount);
 	
-	inline Buffer* const &getBuffer() { return mBuffer; }
+	Buffer* const getBuffer() { return buffer.get(); }
+	
+	const bool& getIsPlaying() { return isPlaying; }
+	
+	const int64_t& getFramesPlayed() { return framesPlayed; }
 	
 protected:
+	bool isPlaying;
 	
-	bool mIsPlaying;
+	bool isLooping;
 	
-	int64_t mNumFramesPlayed;
+	int64_t framesPlayed;
 	
-	Buffer *mBuffer;
+	std::auto_ptr<Buffer> buffer;
 };
 
 #endif /* defined(__FilePlayer__) */
