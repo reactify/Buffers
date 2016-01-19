@@ -59,7 +59,8 @@ Buffer::Buffer(const double sampleRate, const char* filePath)
 
 	CFURLRef fileURL = CFURLCreateWithString(NULL, path, NULL);
 	
-	assert( checkResult(ExtAudioFileOpenURL(fileURL, &file), "Unable to open file") );
+	OSErr errorCode = ExtAudioFileOpenURL(fileURL, &file); // TODO: Support spaces in filepath
+	assert( checkResult(errorCode, "Unable to open file. Perhaps the path contains spaces?") );
 	
 	SInt64 fileSize;
 	UInt32 propertySize = sizeof(fileSize);
