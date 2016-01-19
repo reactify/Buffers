@@ -9,7 +9,6 @@
 #ifndef __Buffer__
 #define __Buffer__
 
-#include <stdio.h>
 #include <stdint.h>
 
 class Buffer
@@ -28,7 +27,7 @@ public:
 	const float* const getFloatData() { return floatData; }
 	
 private:
-	const float* floatData;
+	float* floatData;
 };
 
 #endif /* defined(__Buffer__) */

@@ -34,7 +34,7 @@ public:
 	 *  @param buffer     Interleaved buffer of shorts
 	 *  @param frameCount Number of frames per buffer
 	 */
-	virtual void processShort(int16_t* const buffer, const int frameCount);
+	virtual void processShort(short* const buffer, const int frameCount);
 	
 	/**
 	 *  Process an array of float buffers. It is the user's responsibility

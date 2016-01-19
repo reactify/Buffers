@@ -37,15 +37,17 @@ void FilePlayer::stop()
 	framesPlayed = 0;
 }
 
-void FilePlayer::processShort(int16_t* const buffer, const int frameCount)
+void FilePlayer::processShort(short* const buffer, const int frameCount)
 {
 	float leftBuffer[frameCount], rightBuffer[frameCount];
 	float *buffers[2] = {leftBuffer, rightBuffer};
+	
 	processFloat(buffers, frameCount);
+	
 	for (int i = 0; i < frameCount; i++)
 	{
-		buffer[i*2] = (int16_t)(leftBuffer[i] * 32767.f);
-		buffer[i*2+1] = (int16_t)(rightBuffer[i] * 32767.f);
+		buffer[i*2] = (short)(leftBuffer[i] * 32767.f);
+		buffer[i*2+1] = (short)(rightBuffer[i] * 32767.f);
 	}
 }
 
